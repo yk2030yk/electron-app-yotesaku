@@ -1,0 +1,20 @@
+@mixin reset-input-text {
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  background: none;
+}
+
+@mixin reset-input-checkbox {
+  display: none;
+}
+
+@mixin reset-select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  outline: none;
+  background: transparent;
+}

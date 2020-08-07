@@ -1,0 +1,38 @@
+/*
+ * space
+ */
+$space-large : 30px;
+$space-middle: 20px;
+$space-small : 10px;
+$space       : $space-middle;
+
+/*
+ * margin space size
+ */
+$margin-space-large : 30px;
+$margin-space-middle: 20px;
+$margin-space-small : 10px;
+$margin-space       : $space-middle;
+
+/*
+ * padding space size
+ */
+$padding-space-large : 30px;
+$padding-space-middle: 20px;
+$padding-space-small : 10px;
+$padding-space       : $space-middle;
+
+/*
+ * font-size
+ */
+$font-size-large : 18px;
+$font-size-middle: 12px;
+$font-size-small : 10px;
+$font-size       : $font-size-middle;
+
+/*
+ * font-family
+ */
+$font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+  YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN,
+  Arial, "メイリオ", Meiryo, sans-serif;

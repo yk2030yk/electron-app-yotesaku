@@ -1,0 +1,27 @@
+/*
+ * draw close icon. [x]
+ */
+@mixin icon-close($width: 20px, $color: #FFF) {
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  width: $width;
+  height: $width;
+  &::before, &::after {
+    position: absolute;
+    top: 48%;
+    left: 0;
+    content: "";
+    display: block;
+    width: 70%;
+    height: 3px;
+    background-color: $color;
+    border-radius: 3px;
+  }
+  &::before {
+    transform: skewY(-45deg);
+  }
+  &::after {
+    transform: skewY(45deg);
+  }
+}

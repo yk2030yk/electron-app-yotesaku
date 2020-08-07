@@ -1,0 +1,93 @@
+/*====================
+ * conentbox
+ *===================*/
+.contentBox {
+  @include content-box-normal;
+}
+
+.contentBox-top {
+  @include content-box-normal('top');
+}
+
+.contentBox-card {
+  @include content-box-card;
+  @include set-background-color(#FFF);
+}
+
+/*====================
+ * content
+ *===================*/
+.content-horizontal {
+  @include flex-box-horizontal;  
+}
+
+.content-horizontal {
+  @include flex-box-horizontal;  
+}
+
+.content-card {
+  @include content-card;
+  @include set-background-color(#FFF);
+}
+
+.button-flat {
+  @include button-hover($color-sidebar);
+  padding: 10px;
+  margin-right: 10px;
+  text-align: center;
+  color: #FAFAFA;
+  width: 150px;
+  border-radius: 5px;
+}
+
+
+.title {
+  font-size: $font-size-large;
+  font-weight: bold;
+}
+
+.checkbox {
+  display: flex;
+  height: 30px;
+  align-items: center;
+
+  input[type=checkbox] {
+    display: none;
+  }
+
+  input[type=checkbox] + span {
+    display: inline-block;
+    position: relative;
+    padding-left: 25px;
+    user-select: none;
+  }
+
+  input[type=checkbox] + span::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -4px;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #999;
+    border-radius: 4px;
+  }
+
+  input[type=checkbox]:checked + span::before {
+    background-color: $color-sidebar;
+  }
+
+  input[type=checkbox]:checked + span::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: -3px;
+    left: 6px;
+    width: 4px;
+    height: 9px;
+    transform: rotate(40deg);
+    border-bottom: 3px solid #fff;
+    border-right: 3px solid #fff;
+  }
+}

@@ -1,0 +1,25 @@
+/* button */
+@mixin button($bgColor: false, $fntColor: false, $bdrColor: false, $isHover: true) {
+  display: inline-block;
+  cursor: pointer;
+  user-select: none;
+  
+  @if $bgColor  { background-color: $bgColor; }
+  @if $fntColor { color: $fntColor; }
+  @if $bdrColor { border: solid 1px $bdrColor; }
+  @if $isHover  { @include set-hover-color($bgColor, $fntColor); }
+}
+
+@mixin button-hover($bgColor: false, $fntColor: false, $bdrColor: false) {
+  @include button($bgColor, $fntColor, $bdrColor, false);
+  transition: all 100ms 0s ease;
+  &:hover {
+    filter: drop-shadow(2px 5px 4px rgba(0, 0, 0, 0.4));
+  }
+}
+
+/* button */
+@mixin button-shadow($bgColor: false, $fntColor: false, $bdrColor: false) {
+  @include button($bgColor, $fntColor, $bdrColor, false);
+  filter: drop-shadow(2px 5px 4px rgba(0, 0, 0, 0.4));
+}

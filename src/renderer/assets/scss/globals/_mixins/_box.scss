@@ -1,0 +1,21 @@
+@mixin content-box-normal($type: false) {
+  @include set-margin($type);
+}
+
+@mixin content-box-card($type: false) {
+  @include set-margin($type);
+  @include set-shadow;
+}
+
+@mixin flex-box-horizontal {
+  display: flex;
+}
+
+@mixin flex-box-vertical {	
+  display: flex;
+}
+
+@mixin content-card {
+  @include set-padding;
+  @include set-shadow;
+}

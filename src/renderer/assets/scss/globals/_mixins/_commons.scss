@@ -1,0 +1,81 @@
+/*====================
+ * set space
+ *===================*/
+@mixin set-margin($type: false) {
+  @if $type == "top" {
+    margin: $margin-space;
+  } @else {
+    margin: 0 $margin-space $margin-space $margin-space;
+  }
+}
+
+@mixin set-padding {
+  padding: $padding-space;
+}
+
+/*====================
+ * set color
+ *===================*/
+@mixin set-font-color($bgColor: false) {
+  @if $bgColor {
+    background-color: $bgColor;
+  }
+}
+
+@mixin set-background-color($bgColor: false) {
+  @if $bgColor {
+    background-color: $bgColor;
+  }
+}
+
+@mixin set-hover-color($bgColor: false, $fntColor: false) {
+  &:hover {
+    @if $bgColor {
+      @include set-background-color(darken($bgColor, 15%));
+    }
+    @if $fntColor {
+      @include set-font-color(darken($fntColor, 15%));
+    }
+  }
+}
+
+@mixin set-shadow {
+  filter: drop-shadow(2px 5px 4px rgba(0, 0, 0, 0.4));
+}
+
+/*====================
+ * set font size
+ *===================*/
+@mixin set-font-size-large($isBold: false) {
+  font-size: $font-size-large;
+  @if $isBold {
+    font-weight: bold;
+  }
+}
+
+@mixin set-font-size($isBold: false) {
+  font-size: $font-size-large;
+  @if $isBold {
+    font-weight: bold;
+  }
+}
+
+@mixin set-font-size-small($isBold: false) {
+  font-size: $font-size-small;
+  @if $isBold {
+    font-weight: bold;
+  }
+}
+
+/*====================
+ * set scroll
+ *===================*/
+@mixin set-scroll-x {
+  overflow-x: scroll;
+  &::-webkit-scrollbar { display:none; }
+}
+
+@mixin set-scroll-y {
+  overflow-y: scroll;
+  &::-webkit-scrollbar { display:none; }
+}
